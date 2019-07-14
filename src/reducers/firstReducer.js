@@ -1,5 +1,5 @@
 //import editName, from '../actions/actions';
-import { SHOW_NAME, SHOW_EMAIL,EDIT_NAME } from '../actions/actions';
+import { SHOW_NAME, SHOW_EMAIL,EDIT_NAME, EDIT_EMAIL } from '../actions/actions';
 
 let initialState = {
     name: 'John',
@@ -20,6 +20,9 @@ let firstReducer = (state = initialState, action) => {
 
         case EDIT_NAME:
         return {...state, name: action.payload}
+
+        case EDIT_EMAIL: 
+        return {...state, email: action.payload}
     default:
     console.log(`THis is the default ${state}`)
     return state
