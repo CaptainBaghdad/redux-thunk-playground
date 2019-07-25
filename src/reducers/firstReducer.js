@@ -1,9 +1,10 @@
 //import editName, from '../actions/actions';
-import { SHOW_NAME, SHOW_EMAIL,EDIT_NAME, EDIT_EMAIL } from '../actions/actions';
+import { SHOW_NAME, SHOW_EMAIL,EDIT_NAME, EDIT_EMAIL,REGISTER_USER } from '../actions/actions';
 
 let initialState = {
-    name: 'John',
-    email: 'johnjohn@gmail.com'
+    name: '',
+    email: '',
+    password: ''
 
 
 }
@@ -23,6 +24,14 @@ let firstReducer = (state = initialState, action) => {
 
         case EDIT_EMAIL: 
         return {...state, email: action.payload}
+
+        case REGISTER_USER:
+        console.log(`Data was sent successfully ${action.payload.name}`)
+        return {
+            name: action.payload.name,
+            email: action.payload.email,
+            password: action.payload.password
+        }
     default:
     console.log(`THis is the default ${state}`)
     return state
