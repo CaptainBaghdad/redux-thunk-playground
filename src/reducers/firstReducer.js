@@ -26,8 +26,12 @@ let firstReducer = (state = initialState, action) => {
         return {...state, email: action.payload}
 
         case REGISTER_USER:
-        console.log(`Data was sent successfully ${action.payload.name}`)
+        action.payload
+        
+        .then(finalData => console.log(`Status Symbol ${finalData.companyName}`))
+        //console.log(`Data was sent successfully ${action.payload}`)
         return {
+            ...state,
             name: action.payload.name,
             email: action.payload.email,
             password: action.payload.password

@@ -1,15 +1,22 @@
 import React from 'react';
 import RegisterComponent from './registerComponent';
+import BrokerRegisterComponent from './components/broker/brokerRegisterComponent';
 import './css/main.css';
+import Grid from '@material-ui/core/Grid'
 
 function LandingComponent(props){
     
     
     return (
-        <div className="main-wrapper">
-            <RegisterComponent/>
+            <Grid
+                container
+                alignItems="stretch" 
 
-        </div>
+            >
+            <RegisterComponent/>
+            <BrokerRegisterComponent />
+
+        </Grid>
     )
 
 
