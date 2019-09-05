@@ -53,7 +53,7 @@ function handleSubmit(){
         password: document.getElementById('password').value,
         companyName: document.getElementById('companyName').value,
         yearsExperience: document.getElementById('yearsExperience').value,
-        trailerType: document.getElementById('trailerType').value
+        trailerType: document.getElementById('trailerTypea').value
 
     }
 
