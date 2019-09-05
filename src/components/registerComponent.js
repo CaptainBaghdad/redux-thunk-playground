@@ -25,11 +25,17 @@ let classes  = useStyles();
             <h2>Please fill out the form</h2>
         <Grid item sm={8}>
             <form onSubmit={() => dispatch(handleRegister(handleSubmit()))} >
-                <Input type="text" id="name" name="name" className={classes.input} />
+                Name <Input type="text" id="name" name="name" className={classes.input} />
                 <br/>
-                <Input type="text" id="email" name="email" className={classes.input} />
+                Email <Input type="text" id="email" name="email" className={classes.input} />
                 <br/>
-                <Input type="text" id="password" name="password" className={classes.input} />
+                Password <Input type="text" id="password" name="password" className={classes.input} />
+                <br/>
+                Company Name <Input type="text" id="companyName" name="companyName" className={classes.input} />
+                <br/>
+                Years Experience<Input type="text" id="yearsExperience" name="yearsExperience" className={classes.input} />
+                <br/>
+                Trailer Type <Input type="text" id="trailerType" name="trailerType" className={classes.input} />
                 <br/>
                 <Button type="submit" varient="contained" color="secondary">Submit</Button>
             </form>
@@ -44,7 +50,10 @@ function handleSubmit(){
     let userData =  {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        password: document.getElementById('password').value
+        password: document.getElementById('password').value,
+        companyName: document.getElementById('companyName').value,
+        yearsExperience: document.getElementById('yearsExperience').value,
+        trailerType: document.getElementById('trailerTypea').value
 
     }
 
